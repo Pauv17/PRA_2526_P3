@@ -69,7 +69,7 @@ class HashTable : public Dict<V> {
 			int index = h(key);
 			for (int i = 0; i < table[index].size(); i++) {
 				if (table[index].get(i).key == key) {
-					throw std::runtime_error("La clave ya existe");
+					throw std::runtime_error("La clave esta duplicada");
 				}
 			}
 			TableEntry<V> entry(key, value);
